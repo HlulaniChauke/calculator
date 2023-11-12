@@ -51,7 +51,11 @@ function calPercentage(currentNumber){
 //make displayOnScreen function
 function displayOnScreen (num){
     arrDisplay.push(num);
-    sreenDisplay.innerHTML = arrDisplay.join('');
+    let toDisplay = arrDisplay;
+    if (toDisplay.length > 9){
+        toDisplay = toDisplay.slice(0,9);
+    }
+    sreenDisplay.innerHTML = toDisplay.join('');
 
 }
 
