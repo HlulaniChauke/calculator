@@ -35,6 +35,7 @@ function simpleMath(currentResult, currentNumber, symbolChosen){
 function clearAllVariable(){
      currentResult = 0;
      arrDisplay = [];
+     sreenDisplay.innerHTML = 0;
 }
 
 //make negateNumber function
@@ -56,11 +57,15 @@ function displayOnScreen (num){
 
 calValues.addEventListener('click',(e) => {
     let actionToTake = e.target.className;
-    if (actionToTake === 'function'){
+    if (actionToTake === 'functions'){
+        if (e.target.id === 'c'){
+            console.log(e.target.id);
+            clearAllVariable();
+        }
 
     }
     if (actionToTake === 'operands'){
-
+        displayOnScreen(e.target.innerHTML);   
     }
     if (actionToTake === 'numerals'){
         displayOnScreen(e.target.innerHTML);   
