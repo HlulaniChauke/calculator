@@ -45,7 +45,7 @@ p{
     margin-top: 20px;
   }
 
-  .keys {
+  button {
     background-color:#eee;
     font-size: 40px;
     text-align: center;
@@ -71,7 +71,7 @@ p{
     color: white;
   }
 
-  .zero{
+  #zero{
     grid-column: span 2;
     width: 146px;
   }
